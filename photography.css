@@ -1,0 +1,227 @@
+@font-face {
+    font-family: Montserrat;
+    src: url('fonts/Montserrat-Light.ttf');
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: black;
+    margin:0 auto;
+}
+h1 {
+    color:white;
+    font-size: 3.5rem;
+    margin-left:8vw;
+    margin-top: 12vh;
+}
+.container1 {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows:repeat(3, 250px) ;
+    justify-items: center;
+    align-items: center;
+    margin:3rem 15rem;
+}
+
+.box1 {
+   
+    border: 2px black solid;
+    width: 300px;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+ .box1 img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+.box2 {
+   
+    border: 2px black solid;
+    width: 300px;
+    height: 200px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+
+.box2 img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+.box3 {
+   
+    border: 2px black solid;
+    width: 300px;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+.box3 img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+
+.box5 {
+   
+    border: 2px black solid;
+    width: 300px;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+.box5 img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+.box7 {
+   
+    border: 2px black solid;
+    width: 300px;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+.box7 img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+
+.box8 {
+   
+    border: 2px black solid;
+    width: 300px;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+.box8 img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+.box10 {
+   
+    border: 2px black solid;
+    width: 300px;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+.box10 img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+.box9 {
+   
+    border: 2px black solid;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(222, 138, 222);
+    color: white;
+    text-align: center;
+}
+
+.box9 img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+.box6 {
+   
+    border: 2px black solid;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(193, 54, 77);
+    color: white;
+    text-align: center;
+}
+
+.box6 img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+.container2 {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows:repeat(1, 400px) ;
+    justify-items: center;
+    align-items: center;
+    margin:3rem 20rem;
+}
+
+.box11 {
+   
+    border: 2px black solid;
+    width: 240px;
+    height: 300px;
+    background-color:rgb(106, 45, 45);
+    color: white;
+    text-align: center;
+}
+
+.box11 img{
+    width: 240px;
+    height: 300px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }
+
+.box12 {
+   
+    border: 2px black solid;
+    width: 240px;
+    height: 300px;
+    background-color:rgb(255, 89, 89);
+    color: white;
+    text-align: center;
+}
+
+.box12 img{
+    width: 240px;
+    height: 300px;
+    align-self: center;
+    justify-self:center;
+    border: 2px solid white;
+    }

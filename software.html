@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+    <link rel="stylesheet" href="software.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/css.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <aside>
+        <ul class="rightbar">
+            <li><a href="#py-sidebar" class="active">Python</a></li>
+            <li><a href="#hc-sidebar">HTML & CSS</a></li>
+        </ul>
+    </aside>
+    <h1 class="title" >Software</h1>
+    <div id="py-sidebar" class="python-code">
+        <h1>Python Code</h1>
+        <div class="py-sec-1">
+            <h2>Vending Machine</h2>
+            <video controls>
+                <source src="videos/vending-mach.mp4" type="video/mp4">
+            </video>
+            <pre><code class="language-python">
+        menu = {                    #dictionary storing all the items
+            1000:["$5", "Cappuccino" ] , 
+            1001:["$4.50" , "Latte"] , 
+            1002:["$5" , "Mocha"] , 
+            1003:["$5" , "French Vanilla"] , 
+            1004:["$1.50" , "Black"] ,
+            1005:["$3" , "Machiato"] , 
+            1006:["$3" , "Americano"] , 
+            1007:["$2.50" , "Espresso"] , 
+            1008:["$4" , "Irish"] , 
+            1009:["$5" ,"Frappe"] , 
+            1010:["$2" , "Cold Brew"] , 
+            1011:["$4" ,"Iced Coffee"] , 
+            1012:["$5" ,"Frappe"] , 
+            1013:["$6.50" ,"Iced French Vanilla"] , 
+            1014:["$4" ,"Iced Macha"]
+            }
+            print(menu)
+            for key , items in menu.items(): #iterates through every item in the dictionary
+                price , name = items
+                print(f"code: ({key}), Item: {name} , Price: {price}")
+            user_input = int(input("Enter the code of the product you want to purchase: "))
+            selection = menu[user_input] #retrieving the user input
+            cost = float(selection[0][1:]) #changing the datatype of price from string to float
+            print(f"You selected {selection}")
+            user_suggestion = input("Would you like to have some cookies with your coffee for adittional price of $1? \n Yes/no")
+            if user_suggestion == 'Yes':
+                new_cost = cost + 1.0
+                print(f"Your total is ${new_cost}")
+                cost = new_cost
+            else:
+                print(f"Your total is ${cost}")
+            money = float(input("Please insert money!"))
+            change = money - cost
+            selection_2 = selection[1] #retrieving the name of the item and assigning it to a new variable to print it
+            if change < 0:
+                print("Insufficient amount!")
+            else:
+                print(f"{selection_2} has been dispensed")
+                print(f"Your change is ${change} \nThank you for your purchase!")
+    </code></pre>
+            <a href="https://github.com/amaan-r/Assessment_2-Vending-Machine" target="_blank">
+                <h3>Link to GitHub Repo</h3>
+            </a>
+        </div>
+    </div>
+    <div class="html-css" id="hc-sidebar">
+        <h1>HTML & CSS Code</h1>
+        <div class="html-css-sec-1">
+            <h2>Steins;Gate Wiki Page</h2>
+            <img src="images/wiki.png">
+            <a href="projects/steins;gate/steins;gate.html" target="_blank"><h3>Check it Out</h3></a>
+
+        <pre><h4>HTML</h4><code class="language-html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            
+            &lt;head&gt;
+                &lt;title&gt;My Favourite Series/TV Show&lt;/title&gt;
+                &lt;link rel="stylesheet" type="text/css" href="steins;gate.css"&gt;
+            &lt;/head&gt;
+            
+            &lt;nav&gt;
+                &lt;a class="a1" href="#characters"&gt;Characters&lt;/a&gt;
+                &lt;a class="a1" href="#creative-team"&gt;Creative Team&lt;/a&gt;
+            &lt;/nav&gt;
+            
+            &lt;body&gt;
+            
+                &lt;button&gt;
+                    &lt;a href="https://steins-gate.fandom.com/wiki/Steins;Gate_(anime)" target="_blank"&gt;Anime Wiki&lt;/a&gt;
+                &lt;/button&gt;
+                &lt;button&gt;
+                    &lt;a href="https://www.imdb.com/title/tt1910272/reviews/" target="_blank"&gt;Reviews&lt;/a&gt;
+                &lt;/button&gt;
+            
+                &lt;h1&gt;Steins;Gate&lt;/h1&gt;
+            
+                &lt;h2&gt;Key Information&lt;/h2&gt;
+                &lt;p class="info"&gt;
+                    &lt;b&gt;Genre:&lt;/b&gt; Science Fiction, Thriller &lt;br&gt;
+                    &lt;b&gt;Studio:&lt;/b&gt; White Fox &lt;br&gt;
+                    &lt;b&gt;Episode Count:&lt;/b&gt; 26 &lt;br&gt;
+                    &lt;b&gt;Released:&lt;/b&gt; 2011
+                &lt;/p&gt;
+            
+                &lt;h2&gt;Plot&lt;/h2&gt;
+            
+                &lt;p&gt; Set in 2010 in Akihabara, Tokyo, Steins;Gate follows Rintaro Okabe, a self-proclaimed "mad scientist"
+                    and his friends who accidentally discover a method of sending text messages to the past using a modified
+                    microwave oven.
+                    They soon learn that these "D-mails" can alter the present, leading them down a dangerous path of manipulating
+                    time and
+                    facing unforeseen and often tragic consequences. The narrative explores complex themes of causality, parallel
+                    worlds, and
+                    the weight of choice as Okabe struggles to undo the changes they've made and save his loved ones from
+                    predetermined fates
+                    across different timelines ("worldlines").
+                &lt;/p&gt;
+            
+                &lt;h2 id="characters"&gt;Characters&lt;/h2&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Rintaro Okabe (Hououin Kyouma)&lt;/li&gt;
+                    &lt;li&gt;Kurisu Makise&lt;/li&gt;
+                    &lt;li&gt;Mayuri Shiina&lt;/li&gt;
+                    &lt;li&gt;Itaru Hashida&lt;/li&gt;
+                    &lt;li&gt;Suzuha Amane&lt;/li&gt;
+                    &lt;li&gt;Luka Urushibara&lt;/li&gt;
+                    &lt;li&gt;Faris NyanNyan&lt;/li&gt;
+                    &lt;li&gt;Moeka Kiryu&lt;/li&gt;
+                    &lt;li&gt;Yuugo Tennouji&lt;/li&gt;
+                &lt;/ul&gt;
+            
+                &lt;h2 id="creative-team"&gt;Creative Team&lt;/h2&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;b&gt;Directors:&lt;/b&gt; Hiroshi Hamasaki, Takuya Satou and Tomoki Kobayashi&lt;/li&gt;
+                    &lt;li&gt;&lt;b&gt;Series' Composition:&lt;/b&gt; Jukki Hanada&lt;/li&gt;
+                    &lt;li&gt;&lt;b&gt;Character Design:&lt;/b&gt; Huke&lt;/li&gt;
+                    &lt;li&gt;&lt;b&gt;Music:&lt;/b&gt; Takeshi Abo&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div class="footer"&gt;&lt;/div&gt;
+            &lt;/body&gt;
+            
+            &lt;/html&gt;
+    </code></pre>
+    <pre> <h4>CSS</h4><code class="language-css">
+        @font-face {
+            font-family: "Monotype Garamond";
+            src: url("monotype-garamond-3.woff") format("woff");
+        }
+        body {
+            font-family: "Monotype Garamond" ;
+        }
+        *{
+            margin:0;
+            padding:0;
+            list-style:none ;
+            text-decoration: none;
+        }
+        
+        nav {
+            width:100%; 
+            height:70px; 
+            background-color:black;
+        }
+        
+        .a1 {
+            font-size: 35px;
+            color: white;
+            line-height: 70px;
+            margin-left: 15px;
+            padding:15px
+        }
+        
+        .a1:hover {
+            background-color: gray;   
+        }
+        
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 30px;
+            margin-top:20px;
+            float: right;
+            margin:25px;
+        }
+        
+        a {
+            color:white;
+        }
+        
+        
+        h1 {
+            font-size: 80px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        h2 {
+            text-decoration: underline;
+            text-underline-offset: 11px ;
+            font-size:40px;
+            padding: 30px;
+            margin-top: 50px;
+        }
+        
+        .info {
+            font-size:30px;
+            padding: 30px;
+            line-height: 45px;
+        }
+        
+        p {
+            font-size:30px;
+            padding: 30px;
+            padding-right: 470px;
+            line-height: 43px;
+        }
+        
+        ul {
+            font-size:30px;
+            padding: 30px;
+            padding-right: 320px;
+            line-height: 50px;
+        }
+        
+        .footer {
+            width:100%; 
+            height:60px;
+            display:block; 
+            background-color:black;
+            margin-top: 100px;
+        }
+    </code></pre>
+    </div>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('#py-sidebar, #hc-sidebar');
+        const navLinks = document.querySelectorAll('.rightbar a');
+        function setActiveLink() {
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= (sectionTop - 350)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+        window.addEventListener('scroll', setActiveLink);
+        document.addEventListener("DOMContentLoaded", function(){
+    hljs.highlightAll();
+    });
+    </script>
+</body>
+
+</html>

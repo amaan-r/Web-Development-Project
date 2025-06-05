@@ -1,0 +1,453 @@
+.container {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: auto;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    color: white;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    margin: 5vh auto;
+    padding: 0;
+}
+
+html {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('fonts/Montserrat-Light.ttf');
+}
+
+.title-1 h1 {
+    font-size: 2rem; 
+    cursor: default;
+}
+
+.title-1 {
+    grid-column: 1 / -1; 
+    margin-top: 1rem;
+}
+
+.debian-title {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+}
+
+.debian-title h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration-line: underline;
+    text-underline-offset: 9px;
+    cursor: default;
+}
+
+.debian-para {
+    grid-column: 1 / -1;
+    margin: 1rem 0;
+}
+
+.debian-para p {
+    font-size: 1.2rem;
+    cursor: default;
+    line-height: 1.5;
+}
+
+.slideshow-images img {
+    width: 100%;
+}
+
+#debian-slideshow {
+    max-width: 100%;
+    position: relative;
+    grid-column: 1 / -1;
+    margin: 1rem auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    color: white;
+    font-weight: lighter;
+    font-size: 18px;
+    transition: 1s ease;
+    user-select: none;
+    margin-left: 5px;
+}
+
+.next {
+    float: right;
+    margin-right: 5px;
+}
+
+.text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: -34px;
+    width: 100%;
+    text-align: center;
+    cursor: default;
+}
+
+.numbertext {
+    color: white;
+    font-size: 12px;
+    padding: 0px 4px;
+    margin-top: -25px;
+    position: absolute;
+    font-weight: bolder;
+}
+
+.bsu-title {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+}
+
+.bsu-title h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration-line: underline;
+    text-underline-offset: 9px;
+    cursor: default;
+}
+
+.bsu-button a {
+    text-decoration: none;
+}
+
+.bsu-button {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.bsu-button a h3 {
+    border: 1px white solid;
+    width: 180px;
+    height: 28px;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    line-height: 28px;
+    margin: 0;
+}
+
+.bsu-button a h3:hover {
+    background-color: white;
+    color: black;
+}
+
+.bsu-para {
+    grid-column: 1 / -1;
+    margin: 1rem 0;
+}
+
+.bsu-para p {
+    font-size: 1.2rem;
+    cursor: default;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#bsu-slideshow {
+    max-width: 100%;
+    position: relative;
+    grid-column: 1 / -1;
+    margin: 1rem auto;
+}
+
+
+.title-2 h1 {
+    font-size: 2rem;
+    cursor: default;
+}
+
+.title-2 {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+}
+
+.coffee-app-title {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+}
+
+.coffee-app-title h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration-line: underline;
+    text-underline-offset: 9px;
+    cursor: default;
+}
+
+.coffee-app-vid {
+    grid-column: 1 / -1;
+    border: solid white 2px;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.figma-button {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.figma-button h1 {
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    width: 180px;
+    height: 36px;
+    border: 2px solid white;
+    text-align: center;
+    font-weight: 100;
+    line-height: 36px;
+}
+
+.figma-button h1:hover {
+    background-color: white;
+    color: black;
+}
+
+.high-infi-app {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.high-infi-app h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration-line: underline;
+    text-underline-offset: 9px;
+    cursor: default;
+}
+
+.high-fi-para {
+    color: white;
+    grid-column: 1 / -1;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+.title-3 {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+}
+
+.title-3 h1 {
+    font-size: 2rem;
+    cursor: default;
+}
+
+.digi-art {
+    max-width: 100%;
+}
+
+.img1, .img2, .img3, .img4, .img5, .img6, .img7 {
+    grid-column: 1 / -1;
+    border: 2px solid white;
+    margin: 1rem 0;
+}
+
+.img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img, .img7 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(10, 1fr);
+        max-width: 960px;
+    }
+    
+    .title-1 h1 {
+        font-size: 2.5rem;
+    }
+    
+    .title-1 {
+        grid-column: 2 / 8;
+    }
+    
+    .debian-title {
+        grid-column: 2 / 10;
+    }
+    
+    .debian-title h1 {
+        font-size: 1.8rem;
+    }
+    
+    .debian-para {
+        grid-column: 2 / 7;
+    }
+    
+    .debian-para p {
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+    
+    #debian-slideshow {
+        grid-column: 7 / 10;
+        max-width: 100%;
+    }
+    
+    .bsu-title, .coffee-app-title {
+        grid-column: 2 / 10;
+    }
+    
+    #bsu-slideshow {
+        grid-column: 2 / 10;
+        max-width: 100%;
+    }
+    
+    .coffee-app-vid {
+        grid-column: 3 / 9;
+        width: 100%;
+    }
+    
+    /* Image gallery for tablet - 2 columns */
+    .img1 {
+        grid-column: 2 / 10;
+    }
+    
+    .img2, .img4, .img6 {
+        grid-column: 2 / 6;
+    }
+    
+    .img3, .img5, .img7 {
+        grid-column: 6 / 10;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(14, 1fr);
+        max-width: 1456px;
+    }
+    
+    .title-1 h1 {
+        font-size: 3.5rem;
+    }
+    
+    .title-1 {
+        grid-column: 2 / 8;
+        margin-top: -20px;
+    }
+    
+    .debian-title {
+        grid-column: 3 / 13;
+    }
+    
+    .debian-title h1 {
+        font-size: 2.5rem;
+    }
+    
+    .debian-para {
+        grid-column: 2 / 9;
+    }
+    
+    .debian-para p {
+        font-size: 2rem;
+        line-height: 50px;
+    }
+    
+    #debian-slideshow {
+        grid-column: 10 / 15;
+        max-width: 400px;
+    }
+    
+    .bsu-title {
+        grid-column: 3 / 13;
+    }
+    
+    .bsu-title h1 {
+        font-size: 2.5rem;
+    }
+    
+    .bsu-button {
+        grid-column: 3 / 13;
+        justify-content: flex-end;
+    }
+    
+    .bsu-button a h3 {
+        margin-right: 104px;
+        font-size: 1.25rem;
+    }
+    
+    .bsu-para {
+        grid-column: 4 / 12;
+    }
+    
+    .bsu-para p {
+        font-size: 2rem;
+        line-height: 50px;
+    }
+    
+    #bsu-slideshow {
+        grid-column: 4 / 12;
+        max-width: 830px;
+    }
+    
+    .title-2 h1, .title-3 h1 {
+        font-size: 3.5rem;
+    }
+    
+    .title-2, .title-3 {
+        grid-column: 2 / 8;
+        margin-top: -40px;
+    }
+    
+    .coffee-app-title, .high-infi-app {
+        grid-column: 3 / 13;
+    }
+    
+    .coffee-app-title h1, .high-infi-app h1 {
+        font-size: 2.5rem;
+    }
+    
+    .coffee-app-vid {
+        grid-column: 6 / 10;
+    }
+    
+    .high-fi-para {
+        grid-column: 6 / 10;
+        font-size: 2.5rem;
+    }
+
+    .img1 {
+        grid-column: 4 / 12;
+    }
+    
+    .img2, .img4, .img6 {
+        grid-column: 3 / 7;
+    }
+    
+    .img3, .img5, .img7 {
+        grid-column: 9 / 13;
+    }
+}
+@media (min-width: 1329px) {
+    .container {
+        max-width: 1456px;
+    }
+}

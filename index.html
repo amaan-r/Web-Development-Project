@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a class="logo-a" href="about-me.html" title="About Me">امان</a>
+            <h1>Amaan | Creator</h1>
+        </div>
+
+        <div class="sidebar">
+            <a href="about-me.html">About Me</a><br>
+            <a href="software.html">Software</a><br>
+            <a href="digidesign.html">Digital Designs</a><br>
+            <a href="Photography.html">Photography</a>
+        </div>
+        <div class="contacts">
+            <a href="mailto:mamaan04w@gmail.com" target="_blank">E-mail</a>
+            <a href="https://www.linkedin.com/in/muhammad-amaan~?utm_source=share&utm_
+        campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+            <a href="https://github.com/amaan-r" target="_blank">GitHub</a>
+            <a href="https://youtube.com/@amaan06?si=F3wCsjmgf3xzofoC" target="_blank">Youtube</a>
+            <a href="https://www.instagram.com/manolicious._.36?igsh=MTBkbnl1bDMzcHpxcA==" target="_blank">Instagram</a>
+        </div>
+        <div id="vertical-line"></div>
+    </nav>
+
+    <main>
+        <section id="intro" class="content">
+            <h1>I am Amaan, an aspiring Developer interested in programming, digital design and photography.
+                Always on the look for learning something new and most of my time is spent reading
+                everything I can get my hands on.<br> I'm enrolled as an undergrad at MATI and
+                currently working on my personal portfolio website along an app design project.</h1>
+        </section>
+        <section class="tools-container" id="tools">
+            <img class="logo1" src="images/html-logo.jpg" title="HTML">
+            <img class="logo2" src="images/css-logo.jpg" title="CSS">
+            <img class="logo3" src="images/JS-logo.jpg" title="JavaScript">
+            <img class="logo4" src="images/python-logo.jpg" title="Python">
+            <img class="logo5" src="images/git-logo.jpg" title="Git">
+            <img class="logo6" src="images/github-logo.jpg" title="GitHub">
+            <img class="logo7" src="images/figma-logo1.jpg" title="Figma">
+        </section>
+        <section id="projects" class="main-projects">
+            <h1>Projects</h1>
+            <div class="petrol-calc">
+                <h2>Petrol Calculator</h2>
+                <a href="projects/Petroleum-Calc.html"><img src="images/pet-calc.png"></a>
+                <button><a href="projects/Petroleum-Calc.html" target="_blank">Try it out</a></button>
+            </div>
+            <div class="bitsy-game">
+                <h2>Bitsy Game</h2>
+                <a href="https://amaan21.itch.io/journey-to-the-west">
+                    <img src="images/Journey to the chest.jpg">
+                </a>
+                <button><a href="https://amaan21.itch.io/journey-to-the-west" target="_blank">Try out the
+                        game</a></button>
+            </div>
+        </section>
+    </main>
+
+    <aside>
+        <ul class="rightbar">
+            <li><a href="#intro" class="active">Introduction</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </aside>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.rightbar a');
+        // Function to set active link based on scroll position
+        function setActiveLink() {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= (sectionTop - 150)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            // Updating active link
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Set active link
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+        window.addEventListener('scroll', setActiveLink);
+    </script>
+
+</body>
+
+</html>
